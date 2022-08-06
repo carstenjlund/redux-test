@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectUsers, fetchUsers } from "./usersSlice";
 
-const DataComponent = () => {
+const Users = () => {
 	const users = useSelector(selectUsers);
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -27,4 +27,4 @@ const DataComponent = () => {
 	);
 };
 
-export default DataComponent;
+export default Users;

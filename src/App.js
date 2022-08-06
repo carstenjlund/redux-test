@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Counter } from "./features/counter/Counter";
 import Navigation from "./features/navigation/Navigation";
-import DataComponent from "./features/users/Users";
+import Users from "./features/users/Users";
 import "./App.css";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 				<Navigation />
 				<Routes>
 					<Route path="/counter" element={<Counter />} />
-					<Route path="/data" element={<DataComponent />} />
+					<Route path="/data" element={<Users />} />
 				</Routes>
 			</header>
 		</div>
