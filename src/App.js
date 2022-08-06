@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Counter } from "./features/counter/Counter";
 import Navigation from "./features/navigation/Navigation";
-import DataComponent from "./features/datacomponent/DataComponent";
+import DataComponent from "./features/users/Users";
 import "./App.css";
 
 function App() {
