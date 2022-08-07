@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## UsersSlice
 
-The usersSlice fetches 10 users from the jsonplaceholder api with a thunk and stores them in the usersstore. The usersSlice has an addUser method to, well, add a user!. I dispathc the fetchUser thunk from the app component, to make the state available to both the Users and AddUser components.
+The usersSlice fetches 10 users from the jsonplaceholder api with a thunk and stores them in the usersstore. The usersSlice has a createUser thunk to, well, create a user!. I dispathc the fetchUser thunk from the app component, to make the state available to both the Users and AddUser components.
 
 ## Users component
 
