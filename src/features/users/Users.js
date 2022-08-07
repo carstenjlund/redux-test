@@ -4,10 +4,6 @@ import { selectUsers, fetchUsers } from "./usersSlice";
 
 const Users = () => {
 	const users = useSelector(selectUsers);
-	const dispatch = useDispatch();
-	useEffect(() => {
-		dispatch(fetchUsers());
-	}, []);
 
 	return (
 		<div>

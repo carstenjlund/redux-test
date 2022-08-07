@@ -12,14 +12,21 @@ export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
 	return response.data;
 });
 
+export const createUser = createAsyncThunk("users/createUser", async (data) => {
+	const response = await axios.post(
+		"https://jsonplaceholder.typicode.com/users",
+		data
+	);
+	// The value we return becomes the `fulfilled` action payload
+	return response.data;
+});
 export const usersSlice = createSlice({
 	name: "users",
 	initialState,
 	// The `reducers` field lets us define reducers and generate associated actions
 	reducers: {
 		addUser: (state, action) => {
-			//post user to server and add server response to state...
-			state.data.push(action.payload);
+			//state.data.push(action.payload);
 		},
 	},
 	// The `extraReducers` field lets the slice handle actions defined elsewhere,
@@ -35,6 +42,9 @@ export const usersSlice = createSlice({
 			})
 			.addCase(fetchUsers.rejected, (state, action) => {
 				state.status = "error";
+			})
+			.addCase(createUser.fulfilled, (state, action) => {
+				state.data.push(action.payload);
 			});
 	},
 });
